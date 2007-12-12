@@ -1,6 +1,6 @@
 %define name powerprefs 
 %define version 0.5.0
-%define release 1mdk
+%define release %mkrel 1
 
 Name: %{name}
 Summary: Configuration Client for pbbuttonsd 
