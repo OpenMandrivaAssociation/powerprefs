@@ -12,7 +12,6 @@ Source2:        %name-32x32.png.bz2
 Source3:        %name-48x48.png.bz2
 URL: http://pbbuttons.sourceforge.net/projects/powerprefs/index.html
 Group: System/Configuration/Hardware
-BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
 Requires: pbbuttonsd >= 0.5
 BuildRequires: pbbuttonsd-devel >= 0.5
