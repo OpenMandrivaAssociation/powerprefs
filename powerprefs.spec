@@ -24,7 +24,7 @@ A frontend for pbbuttonsd to allow the configuration of powersaving
 and keyboard settings on many Apple PowerBooks and iBooks (TM). 
 
 %prep
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %setup -q -n %{name}-%{version}
 
 %build
@@ -48,17 +48,17 @@ EOF
 
 #icon
 # icon
-install -d $RPM_BUILD_ROOT/%{_miconsdir}
-install -d $RPM_BUILD_ROOT/%{_iconsdir}
-install -d $RPM_BUILD_ROOT/%{_liconsdir}
-bzcat %{SOURCE1} > $RPM_BUILD_ROOT/%{_miconsdir}/%{name}.png
-bzcat %{SOURCE2} > $RPM_BUILD_ROOT/%{_iconsdir}/%{name}.png
-bzcat %{SOURCE3} > $RPM_BUILD_ROOT/%{_liconsdir}/%{name}.png
+install -d %{buildroot}/%{_miconsdir}
+install -d %{buildroot}/%{_iconsdir}
+install -d %{buildroot}/%{_liconsdir}
+bzcat %{SOURCE1} > %{buildroot}/%{_miconsdir}/%{name}.png
+bzcat %{SOURCE2} > %{buildroot}/%{_iconsdir}/%{name}.png
+bzcat %{SOURCE3} > %{buildroot}/%{_liconsdir}/%{name}.png
 
 %find_lang %{name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post
